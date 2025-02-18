@@ -1,16 +1,17 @@
 "use client";
 import { Carousel } from "flowbite-react";
 import { Link } from "react-router-dom";
+import { homeimg } from "../data/homeimg";
 
 
 export function Homepage() {
   return (
-    <div>
+    <div className="pt-10">
       <div className=" lg:h-[30rem] md:h-[29rem] sm:h-[19rem] h-[10rem] ">
         <Carousel>
           {/* first img */}
           <Link to="/">
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 ">
               <div className="bg-blue-500 flex flex-row items-center font-sans">
                 <div className="md:pl-20 sm:pl-14 pl-8 flex flex-col md:gap-3 sm:gap-1.5 gap-0 ">
                   <p className="md:text-[2rem] sm:text-[1.2rem] font-semibold">
@@ -222,6 +223,128 @@ export function Homepage() {
           </Link>
         </div>
       </div>
+      <div>
+        <div className="bg-gray-100">
+          <p className="font-semibold text-[2rem] py-5 text-center border-b-2">Latest Products</p>
+          <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-6  py-5 px-5">
+           {
+            homeimg.map((item,index)=>(
+              <div className="bg-white shadow-lg shadow-gray-400 "> 
+                 <Link key={index} className=" ">
+            <div>
+              <img
+                className=""
+                src={item.image}
+                alt=""
+              />
+            </div>
+            <div className="flex flex-col items-center md:py-4 sm:py-2 py-0.5">
+              <p className="font-semibold">Product Name</p>
+              <p>⭐⭐⭐⭐⭐</p>
+              <i>$59</i>
+            </div>
+          </Link>
+              </div>
+            ))
+           }
+          </div>
+        </div>
+      </div>
+      <div>
+      
+      <div className="px-10 py-10 ">
+      <div className="flex md:flex-row  sm:flex-col flex-col px-5 border-[0.01rem] shadow-lg shadow-gray-400">
+        <div className="p-5">
+          <img src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/extra-images/promo-large.webp" alt="" />
+        </div>
+        <div className="p-5 ">
+          <p className="text-xl font-bold py-2">New Features of Trending Products</p>
+          <p className="py-2 border-b-[0.01rem]">Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+          <p className="py-2 border-b-[0.01rem]">All the Lorem Ipsum generators on the Internet tend.</p>
+          <p className="py-2 border-b-[0.01rem]">There are many variations of passages of Lorem Ipsum available.</p>
+          <p className="py-2 border-b-[0.01rem]">There are many variations of passages available.</p>
+          <div className="flex flex-col items-center">
+            <div className="flex gap-10 py-5">
+            <button className="bg-gray-500 text-xl font-bold p-2">
+              BUY NOW
+            </button>
+            <button className="bg-gray-500 text-xl font-bold p-2">
+              VIEW DETELS
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div className="px-5">
+        <p className="font-semibold text-center text-5xl border-b-[0.01rem] py-4">
+          Shop By Brands
+        </p>
+        <div className="grid grid-cols-5 gap-4 py-5">
+          <div className="border-[0.01rem] p-2 rounded-xl">
+            <img
+              src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/brands/01.webp"
+              alt=""
+            />
+          </div>
+          <div className="border-[0.01rem] p-2 rounded-xl">
+            <img
+              src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/brands/02.webp"
+              alt=""
+            />
+          </div>
+          <div className="border-[0.01rem] p-2 rounded-xl">
+            <img
+              src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/brands/03.webp"
+              alt=""
+            />
+          </div>
+          <div className="border-[0.01rem] p-2 rounded-xl">
+            <img
+              src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/brands/04.webp"
+              alt=""
+            />
+          </div>
+          <div className="border-[0.01rem] p-2 rounded-xl">
+            <img
+              src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/brands/05.webp"
+              alt=""
+            />
+          </div>
+          <div className="border-[0.01rem] p-2 rounded-xl">
+            <img
+              src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/brands/06.webp"
+              alt=""
+            />
+          </div>
+          <div className="border-[0.01rem] p-2 rounded-xl">
+            <img
+              src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/brands/07.webp"
+              alt=""
+            />
+          </div>
+          <div className="border-[0.01rem] p-2 rounded-xl">
+            <img
+              src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/brands/08.webp"
+              alt=""
+            />
+          </div>
+          <div className="border-[0.01rem] p-2 rounded-xl">
+            <img
+              src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/brands/09.webp"
+              alt=""
+            />
+          </div>
+          <div className="border-[0.01rem] p-2 rounded-xl">
+            <img
+              src="https://codervent.com/shopingo/demo/shopingo_V1/assets/images/brands/10.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      </div>
+
     </div>
   );
 }
